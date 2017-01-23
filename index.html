@@ -9,18 +9,17 @@
 </head>
 
 <body>
-<p>Loading...</p>
 
 <!-- REQUIRED JS SCRIPTS -->
-
 <!-- jQuery 2.2.3 -->
 <script src="plugins/jQuery/jquery-3.1.1.min.js"></script>
 <!-- Auth0 -->
 <script src="plugins/auth0/lock-10.9.1.min.js"></script>
+<script src="dist/js/auth0.js"></script>
 
 <script>
-    var clientId = "JixjGGQuDCCwBW8x37dub83gtNxjRN85";
-    var domain = "jaga-me-coding-test.auth0.com";
+    var clientId = "JixjGGQuDCCwBW8x37dub83gtNxjRN85"
+    var domain = "jaga-me-coding-test.auth0.com"
 
     var lock = new Auth0Lock(clientId, domain, {
         auth: {
@@ -28,40 +27,30 @@
                 scope: 'email'
             }
         }
-    });
+    })
 
-    $(document).ready(function () {
+    $(function () {
         if(isLogin()) {
-            window.location.href = "portal.html";
+            redirectToMainApp()
         } else {
-            lock.show();
+            lock.show()
         }
 
         lock.on("authenticated", function(authResult) {
             lock.getUserInfo(authResult.accessToken, function(error, profile) {
                 if (error) {
-                    console.log(error.toString());
-                    return;
+                    console.log(error.toString())
+                    return
                 }
 
-                localStorage.setItem('access_token', authResult.accessToken);
-                localStorage.setItem('profile', JSON.stringify(profile));
+                storeToken(authResult.accessToken)
+                storeProfile(profile)
 
-                window.location.href = "portal.html";
-            });
-        });
-    });
+                redirectToMainApp()
+            })
+        })
+    })
 
-    /* Returns true if the user is login */
-    function isLogin() {
-        var access_token = localStorage.getItem('access_token');
-
-        if (null == access_token) {
-            return false;
-        } else {
-            return true;
-        }
-    }
 </script>
 </body>
 </html>
