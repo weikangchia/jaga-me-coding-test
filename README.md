@@ -2,6 +2,7 @@ Introduction
 ============
 
 ![Bower version](https://img.shields.io/bower/v/adminlte.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/44b299fd50b94364bcac394db44ffb93)](https://www.codacy.com/app/weikangchia/jaga-me-coding-test?utm_source=github.com&utm_medium=referral&utm_content=weikangchia/jaga-me-coding-test&utm_campaign=badger)
 [![npm version](https://img.shields.io/npm/v/admin-lte.svg)](https://www.npmjs.com/package/admin-lte)
 [![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
 [![CDNJS](https://img.shields.io/cdnjs/v/admin-lte.svg)](https://cdnjs.com/libraries/admin-lte)
