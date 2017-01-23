@@ -15,7 +15,6 @@
                     <tbody>
                       <tr>
                         <th>Title</th>
-                        <th>Address</th>
                         <th>Nurse</th>
                         <th>Start Date</th>
                         <th>Payment</th>
@@ -23,6 +22,9 @@
                     </tbody>
                   </table>
               </div>
+          </div>
+          <div class="overlay">
+              <i class="fa fa-refresh fa-spin"></i>
           </div>
         </div>
       </div>
@@ -32,15 +34,14 @@
   <script>
     $(function() {
       $.ajax({
-        url: "http://demo1381866.mockable.io/v1/appointments"
+        url: "https://demo1381866.mockable.io/v1/appointments"
       }).then(function(data) {
+        $('.overlay').hide()
         $.each(data, function() {
 
           $('#past-appointment tr:last').after(
             '<tr><td>'
             + this.title
-            + '</td><td class=".hidden-sm">'
-            + this.address_1
             + '</td><td>'
             + formatName(this.nurse)
             + '</td><td>'
