@@ -19,9 +19,9 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
           <li class="header">NAVIGATION</li>
-          <!-- Optionally, you can add icons to the links -->
-          <li class={ active: bookActive }><a href="#"><i class="fa fa-link"></i> <span>Book Appointment</span></a></li>
-          <li class={ active: histActive }><a href="#past"><i class="fa fa-link"></i> <span>Past Appointment</span></a></li>
+          <li><a href="#patient"><i class="fa fa-users"></i> <span>Patient</span></a></li>
+          <li><a href="#"><i class="fa fa-link"></i> <span>Book Appointment</span></a></li>
+          <li><a href="#past"><i class="fa fa-link"></i> <span>Past Appointment</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>
