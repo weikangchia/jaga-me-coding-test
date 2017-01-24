@@ -9,19 +9,24 @@ All the Routes can be found in `app/starter.html`.
 
 e.g. to route to the User Profile profile
 
-1. Include the tag<br>
+1. Include the tag
+
    ```javascript
    <script src="user-profile.tag" type="riot/tag"></script>
    <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
    <script src="https://rawgit.com/riot/route/master/dist/route.min.js"></script>
    ```
-2. Make your app start listening to url change<br>
+   
+2. Make your app start listening to url change
+
    ```javascript
    route.stop()
    route.start(true)
    route.base('#')
    ```
-3. Mount the specific tag<br>
+   
+3. Mount the specific tag
+
    ```javascript
    route('/profile', function() {
      riot.mount('#main', 'user-profile', {
