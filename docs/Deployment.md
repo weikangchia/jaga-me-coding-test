@@ -10,7 +10,7 @@
 2. Select the Hosting option in the command line.
 3. Select your project name that you have created earlier.
 4. Use default Firebase real time database rules.
-5. Choose `dist/` as the public directory instead of the default `public/` directory.
+5. Choose `.` as the public directory instead of the default `public/` directory.
 6. Select <b>yes</b> to rewrite all urls to `index.html`.
 7. Select <b>no</b> to overwrite the `index.html` file.
 
