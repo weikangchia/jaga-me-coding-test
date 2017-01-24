@@ -8,6 +8,7 @@ In this project, we used [riot.js](http://riotjs.com/) to build our front-end UI
 All the Routes can be found in `app/starter.html`.
 
 e.g. to route to the User Profile profile
+
 1. Include the tag<br>
    ```javascript
    <script src="user-profile.tag" type="riot/tag"></script>
